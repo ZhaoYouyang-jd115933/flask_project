@@ -6,14 +6,17 @@ def celsius_to_fahrenheit(celsius):
     """Convert Celsius to Fahrenheit."""
     return celsius * 9.0 / 5 + 32
 
+
 @app.route('/')
 def hello_world():
     return '<h1>Hello World :)</h1>'
+
 
 @app.route('/greet')
 @app.route('/greet/<name>')
 def greet(name=""):
     return f"Hello {name}"
+
 
 @app.route('/convert/<celsius>')
 def convert_temperature(celsius):
